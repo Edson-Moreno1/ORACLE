@@ -9,11 +9,17 @@ elementoHTML.innerHTML = texto;
 
 function verificarIntento(){
     let numeroDeUsuario = parseInt(document.getElementById('valorUsuario').value);
-    console.log(typeof(numeroDeUsuario));
-    console.log(typeof(numeroSecreto));
-    console.log(numeroSecreto);
-    console.log(numeroDeUsuario);
-    console.log(numeroDeUsuario === numeroSecreto);
+
+    if (numeroDeUsuario === numeroSecreto){
+        asignarTextoElemento('p','Acertaste el número');
+    }else {
+        if(numeroDeUsuario > numeroSecreto){
+            asignarTextoElemento('p','El número secretro es menor');
+        }else{
+            asignarTextoElemento('p','El número secreto es mayor');
+        }
+    }
+
     return;
 }
 
