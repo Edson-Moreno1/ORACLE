@@ -1,20 +1,40 @@
 //Varibles
-/*
-let numeroSecreto=2;
-let numeroUsuario = prompt ("Me indicas un número 1 y 10 por favor:");
+let numeroMaximoPosible = 10;
+let numeroSecreto= Math.floor(Math.random()*numeroMaximoPosible)+1;
+let numeroUsuario=0;
+let intentos = 1;
+//let palabraVeces ='vez';
+let maximosIntentos = 3;
+
+while(numeroUsuario != numeroSecreto){
+   numeroUsuario = parseInt(prompt (`Me indicas un número 1 y ${numeroMaximoPosible} por favor:`));
+
+  console.log(numeroSecreto);
+  console.log(numeroUsuario);
 
 
-console.log(numeroUsuario);
 
+  if (numeroUsuario == numeroSecreto){
+      alert(`Acertaste el numero es: ${numeroUsuario}. Lo hiciste en ${intentos}${intentos == 1 ? ' vez' : ' veces'}`);
+  }else{
+    if (numeroUsuario > numeroSecreto){
+      alert('El número secreto es menor');
+    }else{
+      alert('El número secreto es mayor');
+    }
+    //Incrementos el contador cuando no acierta
+    //intentos = intentos + 1;
+    intentos++;
+    //palabraVeces = 'veces';
 
-if (numeroUsuario == numeroSecreto){
-    alert(`Acertaste el numero es: ${numeroUsuario}, mi loc`);
-}else{
-    alert('No acertaste el número');
+    if(intentos > maximosIntentos){
+      alert(`Llegaste al número máximo de ${maximosIntentos} intentos,el numero era ${numeroSecreto}`);
+      break;
+    }
+      //alert('No acertaste el número');
+  }
 }
 
-
-*/
 
 
 /*
@@ -123,13 +143,17 @@ let nombreUser = prompt ("Ingresa codigo de usuario");
 alert(`Hola ${nombreUser}, tu saldo es de ${saldo} pesos mxm`); 
 
 */
-
+/*
 let nombreJugador = prompt ("Ingresa tu nombre de jugador");
 
 let puntuacion = prompt ("Ingresa tu puntuacion");
+
+
 
 if(puntuacion >=100){
   alert(`Felicidades ${nombreJugador}, tu puntuacion es de ${puntuacion}, eres el maximo ganador PIBE`);
 }else{
   alert(`Lo siento ${nombreJugador}, tu puntuacion es de ${puntuacion}, no eres el gran ganador capo`);
 }
+*/
+
