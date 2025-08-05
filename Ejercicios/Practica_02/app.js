@@ -29,9 +29,13 @@ function verificarIntento(){
     return;
 }
 
+
 function limpiarCaja(){
     
 }
+
+
+                                                                                  
 
 function generarNumeroSecreto() {
     return Math.floor (Math.random()*10)+1;
