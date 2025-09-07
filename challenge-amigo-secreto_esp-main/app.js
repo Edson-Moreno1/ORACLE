@@ -38,7 +38,11 @@ function ActualizarListaDeAmigos(){
 }
 
     
-
+function sortearAmigo(){
+    let amigoSecreto = amigos[Math.floor(Math.random() * amigos.length)];
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = "El amigo secreto es: " + amigoSecreto;
+}
 
 
 function limpiarCampoDeEntrada(){
